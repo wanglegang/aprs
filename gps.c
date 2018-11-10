@@ -3,7 +3,7 @@
 #include <ESP8266WiFi.h>
 #include <WiFiUdp.h> //提供UDP相关功能
 unsigned int UDPremotePort = 14580;
-static unsigned char UDPremoteIP[4] = {202,141,176,2} ; //UDP服务器地址
+static unsigned char UDPremoteIP[4] = {202,141,*,*} ; //UDP服务器地址
 WiFiUDP Udp;
 TinyGPSPlus gps;  // The TinyGPS++ object
 //SoftwareSerial ss(4, 5); // The serial connection to the GPS device
