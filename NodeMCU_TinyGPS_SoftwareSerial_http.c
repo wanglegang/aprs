@@ -6,10 +6,9 @@ unsigned int UDPremotePort = 14580;
 static unsigned char UDPremoteIP[4] = {202,141,*,*} ; //UDP服务器地址
 WiFiUDP Udp;
 TinyGPSPlus gps;  // The TinyGPS++ object
-//SoftwareSerial ss(4, 5); // The serial connection to the GPS device
-SoftwareSerial ss(12,14); // The serial connection to the GPS device
-const char* ssid = "xm";
-const char* password = "12345678";
+SoftwareSerial ss(12,14); // 实际接在D5 D6
+const char* ssid = "xm**";
+const char* password = "12345678***";
 float latitude , longitude;
 int year , month , date, hour , minute , second;
 String date_str , time_str , lat_str , lng_str;
