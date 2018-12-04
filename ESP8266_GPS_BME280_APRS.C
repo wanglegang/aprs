@@ -28,8 +28,8 @@ static unsigned char UDPremoteIP[4] = {202,141,176,2} ; //UDP服务器地址
 WiFiUDP Udp; 
 TinyGPSPlus gps;  // The TinyGPS++ object  gps初始化
 SoftwareSerial ss(12, 14); // 接收gps的软串口
-const char* ssid = "Uolian-2.4";    //路由器ssid
-const char* password = "13505311306";  // 密码
+const char* ssid = "******";    //路由器ssid
+const char* password = "*****";  // 密码
 float latitude , longitude;  //浮点型定义经纬度变量
 int year , month , date, hour , minute , second; //定义年月日
 String date_str , time_str , lat_str , lng_str;
