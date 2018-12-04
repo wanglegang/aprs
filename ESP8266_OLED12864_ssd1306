@@ -1,0 +1,39 @@
+
+//ESP8266_OLED12864_ssd1306
+#include <Adafruit_ssd1306syp.h>
+#define SDA_PIN 12
+#define SCL_PIN 13
+Adafruit_ssd1306syp display(SDA_PIN,SCL_PIN);
+void setup()
+{
+  delay(1000);
+  display.initialize(); //启动显示
+}
+void loop()
+{
+  //display.drawLine(0, 0, 127, 63,WHITE); //划线 从0,0到127,63
+ // display.update();
+ // delay(1000);
+  display.clear();
+  display.setTextSize(1.5); //字体大小
+  display.setTextColor(WHITE);  //设置颜色
+  display.setCursor(10,3);
+  display.println("BG4WLG BME280 GPS");
+  display.setCursor(0,17);
+  //display.setTextColor(BLACK, WHITE); // 反白显示
+  display.println("Temp:29.71");
+  display.setCursor(64,17);
+  display.println("Humi:32.14");
+  display.setCursor(0,30);
+  display.println("Press:1026.19par");
+  display.setCursor(0,43);
+  display.println("Lon:11704.51E");
+  display.setCursor(0,56);
+  display.println("Lat:3641.75N");
+  display.setTextSize(1.5);
+//  display.setTextColor(WHITE);
+//  display.print("0x"); display.println(0xDEADBEEF, HEX);//hex输出
+  display.update(); //画面更新
+  delay(2000);
+  display.clear();//清除显示
+}
